@@ -8,6 +8,10 @@ Authors: Juliet Moreiro (@julietsvq) and Pablo Doval (@PabloDoval)
 import sys
 sys.path.append('../') 
 from utils.init import init
+from keras.datasets import mnist
 
 if __name__ == '__main__':
     init()
+
+    # Retrieve dataset
+    (X_train, y_train), (X_test, y_test) = mnist.load_data()
